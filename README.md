@@ -1,5 +1,5 @@
-# `Gamification-StarterCode`
-
+# `Gamification-Final Code `
+Tech Stack Used -> Moralis.io use For Boiler Plate Code and also as an Instance for server, MoralisDB for Storing diffrent instances of Diffrent accounts , Moment for current Momnet ,Carco-less for regular updation 
 > A clone of CoinMarketCap Diamonds gamification model, built using Moralis and the Ethereum-Boilerplate
 
 ![Preview](dAppDemo.gif)
