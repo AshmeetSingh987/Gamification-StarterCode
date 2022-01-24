@@ -4,10 +4,6 @@
 
 ![Preview](dAppDemo.gif)
 
-🚀Ethereum-Boilerplate: https://ethereum-boilerplate.github.io/ethereum-boilerplate
-
-This boilerplate is built on [react-moralis](https://github.com/MoralisWeb3/react-moralis) and [Moralis](https://moralis.io?utm_source=github&utm_medium=readme&utm_campaign=ethereum-boilerplate). Also has its own context provider for quick access to `chainId` or `ethAddress`
-
 
 # 🚀 Quick Start
 
@@ -31,9 +27,7 @@ REACT_APP_MORALIS_SERVER_URL = https://xxxxxx.grandmoralis.com:2053/server
 yarn start
 ```
 
-🧭 Watch a full tutorial of the gamification component being built here: https://youtu.be/hufjWlGDvRA
 
-![Preview](YTLink.jpg)
 
 
 
