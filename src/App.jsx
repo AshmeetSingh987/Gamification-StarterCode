@@ -21,10 +21,10 @@ import Contract from "components/Contract/Contract";
 import Ramper from "components/Ramper";
 import MenuItems from "./components/MenuItems";
 import logo from "Logo.png";
-//import { TrophyFilled, GiftFilled, FireFilled } from "@ant-design/icons";
-const { Header } = Layout;
+import { TrophyFilled, GiftFilled, FireFilled } from "@ant-design/icons";
+const { Header }=Layout;
 
-const styles = {
+const styles={
   content: {
     display: "flex",
     justifyContent: "center",
@@ -54,13 +54,13 @@ const styles = {
     fontWeight: "600",
   },
 };
-const App = ({ isServerInfo }) => {
-  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
+const App=({ isServerInfo }) => {
+  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading }=
     useMoralis();
 
   useEffect(() => {
-    const connectorId = window.localStorage.getItem("connectorId");
-    if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading)
+    const connectorId=window.localStorage.getItem("connectorId");
+    if (isAuthenticated&&!isWeb3Enabled&&!isWeb3EnableLoading)
       enableWeb3({ provider: connectorId });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated, isWeb3Enabled]);
@@ -91,7 +91,20 @@ const App = ({ isServerInfo }) => {
         <div style={styles.content}>
           <Switch>
             <Route exact path="/gamify">
-              <Gamify />
+              <Tabs
+                defaultActiveKey="1"
+                tabPosition="left"
+              >
+                <Tabs.TabPane tab={<span><FireFilled />My Runes</span>} key="1">
+                  <Gamify tab="runes" />
+                </Tabs.TabPane>
+                <Tabs.TabPane tab={<span><TrophyFilled /> Leaderboard</span>} key="2">
+                  <Gamify tab="leaderboard" />
+                </Tabs.TabPane>
+                <Tabs.TabPane tab={<span><GiftFilled /> Rewards</span>} key="3">
+                  <Gamify tab="rewards" />
+                </Tabs.TabPane>
+              </Tabs>
             </Route>
             <Route path="/wallet">
               <Wallet />
